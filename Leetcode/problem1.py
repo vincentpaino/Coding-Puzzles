@@ -22,12 +22,20 @@ class Solution(object):
             "M": 1000
         }
 
-        for i in range(len(s)):
+        print(len(s))
+
+        for i in range(len(s) - 1):
             char = s[i]
             total = 0
 
             if len(s) > 1:
-                return
+                char_ahead = s[i+1]
+                if roman_map[char_ahead] > roman_map[char]:
+                    total = roman_map[char_ahead] - roman_map[char]
+                else:
+                    total += roman_map[char]
+                    total += roman_map[char_ahead]
+
             else:
                 if char == "I":
                     total += roman_map[char]
@@ -50,7 +58,7 @@ class Solution(object):
 
                 if char == "M":
                     total += roman_map[char]
-                return total
+        return total
 
 
                 
@@ -62,5 +70,5 @@ class Solution(object):
 
 if __name__ == "__main__":
     solution = Solution()
-    result = solution.romanToInt('V')
+    result = solution.romanToInt('XXXX')
     print(f"The solution is: {result}")

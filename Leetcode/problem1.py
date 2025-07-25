@@ -9,7 +9,7 @@ class Solution(object):
         :rtype: int
         """
         # Create a dictionary of key/value pairs of roman numeral strings/values.
-        if s.length > 15 and s.length < 1:
+        if len(s) > 15 and len(s) < 1:
             return
 
         roman_map = {
@@ -29,27 +29,27 @@ class Solution(object):
             if len(s) > 1:
                 return
             else:
-                if roman_map[char] == "I":
-                    total+=1
+                if char == "I":
+                    total += roman_map[char]
 
-                if roman_map[char] == "V":
-                    total+=5
+                if char == "V":
+                    total += roman_map[char]
 
-                if roman_map[char] == "X":
-                    total+=10
+                if char == "X":
+                    total += roman_map[char]
                     #while(s[i+1] == "X"):
 
-                if roman_map[char] == "L":
-                    total+=50
+                if char == "L":
+                    total += roman_map[char]
 
-                if roman_map[char] == "C":
-                    total+=100
+                if char == "C":
+                    total += roman_map[char]
 
-                if roman_map[char] == "D":
-                    total+=500
+                if char == "D":
+                    total += roman_map[char]
 
-                if roman_map[char] == "M":
-                    total+=1000
+                if char == "M":
+                    total += roman_map[char]
                 return total
 
 
@@ -61,5 +61,6 @@ class Solution(object):
 
 
 if __name__ == "__main__":
-    result = Solution.romanToInt(self, "IV")
+    solution = Solution()
+    result = solution.romanToInt('V')
     print(f"The solution is: {result}")

@@ -9,6 +9,9 @@ class Solution(object):
         :rtype: int
         """
         # Create a dictionary of key/value pairs of roman numeral strings/values.
+        if s.length > 15 and s.length < 1:
+            return
+
         roman_map = {
             "I": 1,
             "V": 5,
@@ -21,7 +24,35 @@ class Solution(object):
 
         for i in range(len(s)):
             char = s[i]
-            if roman_map[char]:
+            total = 0
+
+            if len(s) > 1:
+                return
+            else:
+                if roman_map[char] == "I":
+                    total+=1
+
+                if roman_map[char] == "V":
+                    total+=5
+
+                if roman_map[char] == "X":
+                    total+=10
+                    #while(s[i+1] == "X"):
+
+                if roman_map[char] == "L":
+                    total+=50
+
+                if roman_map[char] == "C":
+                    total+=100
+
+                if roman_map[char] == "D":
+                    total+=500
+
+                if roman_map[char] == "M":
+                    total+=1000
+                return total
+
+
                 
 
 

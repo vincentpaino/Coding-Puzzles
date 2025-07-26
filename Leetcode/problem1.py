@@ -34,7 +34,7 @@ class Solution(object):
                     total = roman_map[char_ahead] - roman_map[char]
                 else:
                     total += roman_map[char]
-                    total += roman_map[char_ahead]
+                    #total += roman_map[char_ahead]
 
             else:
                 if char == "I":

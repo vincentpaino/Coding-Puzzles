@@ -45,4 +45,5 @@ class Solution(object):
             return head3
         
 
-if 
+if __name__ == "__main__":
+    

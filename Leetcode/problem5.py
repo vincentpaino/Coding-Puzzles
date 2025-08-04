@@ -21,7 +21,7 @@ class Solution(object):
         head3 = None
         i, j = 0
 
-        while(list1.next != None and list2.next !=None):
+        while(list1 != None and list2 != None):
             if list3.val == 0 and list3.next == None:
                 if head1 > head2:
                     list3.val = head2
@@ -29,7 +29,7 @@ class Solution(object):
                     head2 = list2.next.val
                     list2 = list2.next
                 else:
-                    list3 = head1
+                    list3.val = head1
                     i += 1
                     head1 = list1.next.val
                     list1 = list1.next
@@ -44,6 +44,7 @@ class Solution(object):
                     i += 1
                     head1 = list1.next.val
                     list1 = list1.next
+            head3 = list3
             return head3
         
 

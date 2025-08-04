@@ -48,5 +48,7 @@ class Solution(object):
         
 
 if __name__ == "__main__":
-    solution = Solution.mergeTwoLists([1,2,3], [4,5,6])
+    list1 = ListNode(1)
+    list2 = ListNode(2)
+    solution = Solution.mergeTwoLists(list1, list2)
     

@@ -11,10 +11,20 @@ class Solution(object):
         :rtype: Optional[ListNode]
         """
         length = 0
-        while head != None:
+        dummyHead = head
+        while dummyHead != None:
+            length = length+1
+            dummyHead = dummyHead.next
+        
+        indexToRemove = length - n
             
-            
-            head = head.next
+        nodeCounter = 0
+        tempHead = head
+        while nodeCounter != indexToRemove:
+            prevNode = tempHead
+            tempHead = tempHead.next
+
+        prevNode.next = tempHead.next
     
         return head
 

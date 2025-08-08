@@ -10,6 +10,11 @@ class Solution(object):
         :type n: int
         :rtype: Optional[ListNode]
         """
+        length = 0
+        while head != None:
+            
+            
+            head = head.next
     
         return head
 

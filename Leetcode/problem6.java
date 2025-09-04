@@ -20,18 +20,33 @@ Constraints:
 */
 
 class Solution{
-        public String toInt(String s){
+        public int toInt(String s){
             int num = 0;
             int strLen = s.length();
             int counter = 0;
-            int powerMultiple = 0;
+            int added;
             for(int i = strLen - 1; i != 0; i--){
-
+                if(s[i] == 1){
+                    
+                }
+                counter++; // this variable is used for the exponentiated of 2^X --> 2^counter
             }
         }
 
+        public string toString(int val){
+
+        }
         public String addBinary(String a, String b) {
             String result = "";
 
+    }
+}
+
+public class main{
+    public static void main(String[] args) {
+        String String1 = "101"
+        String String2 = "10101"
+
+        System.out.println(addBinary(String1, String2));
     }
 }
